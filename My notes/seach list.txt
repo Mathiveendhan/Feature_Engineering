@@ -1,0 +1,32 @@
+          F.E                ML
+raw data------->clean data ------->useful data
+
+
+EDA Libraries:
+DTale
+visualizeAnalysis
+pandas profiling
+sweetviz
+autoviz
+accuracy test methods...
+
+
+
+Facetgrid,distplot
+KDD orange
+.map()
+
+
+handling null values<---scaling
+
+qq plot-->all points are lie on the line, then ,it is gaussian distribution
+
+logarithmic transformation-->apply on the left or right skwed 
+
+credit card dataset use not sensitive algorithm for outliers 
+
+extreme value analysis,inter quartile range(iqr)[for not skewd dataset]
+
+gausian distribution
+
+normally distributed VS skewed 

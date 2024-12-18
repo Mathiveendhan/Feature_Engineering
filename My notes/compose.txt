@@ -1,0 +1,39 @@
+compose
+
+-->ColumnTransformer
+-->ColumnTransformerMixin
+-->ColumnSelector
+-->TransformedTargetRegressor
+-->make_column_transformer
+
+
+
+
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.impute import SimpleImputer
+from sklearn.compose import ColumnTransformer
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Define the preprocessing steps
+numeric_transformer = SimpleImputer(strategy='mean')
+categorical_transformer = OneHotEncoder(handle_unknown='ignore')
+
+# Define the preprocessing pipeline
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', numeric_transformer, ['A', 'B']),
+        ('cat', categorical_transformer, ['C', 'D'])
+    ]
+)
+
+# Fit and transform the data
+data_transformed = preprocessor.fit_transform(data)
+
+# Convert the transformed data back to a DataFrame
+data_transformed = pd.DataFrame(data_transformed, columns=['A', 'B', 'C', 'D'])
+
+# Print the transformed data
+print(data_transformed)

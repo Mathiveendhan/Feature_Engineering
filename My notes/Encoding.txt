@@ -1,0 +1,38 @@
+Encoding Categorical Variables(by using this, Which can add more columns)
+
+--One-Hot Encoding
+--Binary Encoding
+--Ordinal Encoding
+--Target Encoding
+--Handling High-Cardinality Categorical Variables
+--count or frequency encoding(https://youtu.be/MPnNC6kkNC4?si=0VHsXMtKxsMxlwFE)
+
+One-Hot Encoding:
+    >>One-hot encoding is used to convert categorical data into a numerical format that can be used for machine learning algorithms
+    >>It creates binary columns, one for each unique category, where a 1 indicates the presence of that category and 0 indicates its absence.
+    >>it creates high dimensions, if that feature has many categorical values-->It leads to issue(curse of dimensionality)
+    >>get_dummies() used
+
+Binary Encoding:
+     >>Binary encoding is another method for encoding categorical variables into a numerical format. It is similar to one-hot encoding but uses binary digits (0s and 1s) to represent each category.
+    >>Binary encoding is useful for handling high-cardinality features(more unique values)
+
+
+Encoding
+
+                       --One-Hot Encoding(normal one hot encoding)
+nominal encoding>>     --One-Hot Encoding with many category(if you have 50 categorical values in one feature, and 12 values are mostly repeated,and get    
+                                                             that 12 values, use one hot  encoding on them )                                           
+                       -->mean encoding(get mean values for the nominal value and replace it with he mean value)
+                       -->median encoding
+
+
+
+ordinal encoding>>   -->label encoding(use ranking method apple's to ordinal categories)
+(ranking method      -->target guided with ordinal encoding(if a feature has may categorical values, an each has (1 or 0)values, get mean for that   
+ it can use)                                                categorical values and get all the mean values for the categorical values(ordinal) and align  
+                                                             label values as 1,2,3,..n [based on the rank get from the values of the mean])(based on the  
+                                                              ranks, you have to assign labels)
+ 
+
+https://youtu.be/OTPz5plKb40?list=PLZoTAELRMXVPwYGE2PXD3x0bfKnR0cJjN

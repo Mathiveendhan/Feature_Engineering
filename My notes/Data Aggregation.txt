@@ -1,0 +1,13 @@
+Data Aggregation
+
+
+1. GroupBy
+2. Aggregation Functions
+3. Pivot Tables
+4. Rolling Windows
+5. Resampling
+6. Cross-Tabulation
+7. Data Cube
+8. Histograms and Frequency Tables
+9. Summary Statistics
+10. Combining Data

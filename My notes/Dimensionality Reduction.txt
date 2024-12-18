@@ -1,0 +1,20 @@
+Dimensionality Reduction
+   --Dimensionality reduction is a technique used in exploratory data analysis (EDA) to reduce the number of features (or dimensions) in a dataset
+   --particularly useful when working with high-dimensional data
+
+-->Principal Component Analysis (PCA)
+-->t-Distributed Stochastic Neighbor Embedding (t-SNE)
+
+
+
+
+Principal Component Analysis (PCA):
+
+  >>PCA is a linear dimensionality reduction technique that aims to find the directions (principal components) in which the data varies the most.
+  >>used to visualize high-dimensional data in lower dimensions, identify patterns, and reduce noise.
+
+
+t-Distributed Stochastic Neighbor Embedding (t-SNE):
+
+  >>t-SNE is a non-linear dimensionality reduction technique that is particularly effective for visualizing high-dimensional data in two or three dimensions.
+  

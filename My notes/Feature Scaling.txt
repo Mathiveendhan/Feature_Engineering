@@ -1,0 +1,50 @@
+Feature Scaling:
+   -->Standardization
+   -->Normalization
+
+
+When to Apply Feature Scaling
+Gradient Descent-based Algorithms: Feature scaling helps gradient descent converge faster.
+Distance-based Algorithms: Feature scaling is crucial for algorithms like KNN, K-Means, and SVM that rely on distance calculations.
+Principal Component Analysis (PCA): Feature scaling ensures each feature contributes equally to the principal components.
+Regression: Feature scaling can help with interpretability and creation of interaction/power terms.
+
+
+
+Normalization
+   Normalization is the process of scaling the data to a common range, usually between 0 and 1, to prevent features with different scales from dominating the model
+
+
+
+--MinMaxScaler
+--Standardscaler
+--RobustScaler
+--Normalizer
+--Quantile transformer
+--power transformer
+--MaxAbsScaler
+
+https://youtu.be/V1287MeRF-E?si=QzuqoJKEq4mqUx40
+https://youtu.be/sxEqtjLC0aM?si=lonYA8ei2nWzHULR
+
+
+
+Standardization-->makes mean=0,standard deviation=1
+
+Feature Scaling(it makes our model's(algorithms) works very quickly)
+   |
+   |---magnitude
+   |---units   
+ 
+ex:199(magnitude) cm(units)
+
+use it in,
+->linear regression ,it can reduce the convergence
+->kNN
+->k means 
+
+don't use it in,(it doesn't make any impact ,any use)
+->decision tree
+->Random forest
+->Xgboost 
+

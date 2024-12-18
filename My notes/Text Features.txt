@@ -1,0 +1,10 @@
+Text Features
+
+-->Tokenization(okenization involves breaking down text into smaller units like words or phrases.)
+
+-->Vectorization( vectorization is the process of converting text data into numerical feature vectors for machine learning models.)
+
+sample input:
+
+  text_data = ["This is a sample sentence for tokenization and vectorization.",
+             "Text vectorization is important for NLP tasks like sentiment analysis."]

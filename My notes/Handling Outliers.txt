@@ -1,0 +1,38 @@
+Handling Outliers(Outliers are data points that lie far away from the majority of the other data points in a dataset)
+
+   -->truncation(Truncation involves removing or adjusting data values to a specified level of precision) 
+
+        
+import numpy as np
+
+# Create a sample array
+data = np.array([1.2345, 2.3456, 3.4567, 4.5678, 5.6789])
+
+# Truncate the data to 2 decimal places
+truncated_data = np.round(data, 2)
+
+print(truncated_data)
+
+
+
+   -->transformation(Transformation refers to altering data values using mathematical functions like logarithm, squaring, or other operations)
+
+   
+ import numpy as np
+
+# Create a sample array
+data = np.array([1, 2, 3, 4, 5])
+
+# Apply a logarithmic transformation
+transformed_data = np.log(data)
+
+print(transformed_data)
+
+
+Output:
+
+Truncated Data:
+[1.23 2.35 3.46 4.57 5.68]
+
+Transformed Data:
+[0.20906196 0.85441533 1.24054945 1.51512714 1.73460106]

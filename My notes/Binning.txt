@@ -1,0 +1,2 @@
+Binning/Discretization:
+     >>>Binning, also known as bucketing or discretization, is a technique used in exploratory data analysis (EDA) to group continuous numeric variables into a smaller number of bins or intervals

@@ -1,0 +1,78 @@
+Handling Missing Values
+
+--imputation
+    -->Imputation involves replacing missing values with estimated or inferred values.
+
+    --->>SimpleImputer(imputation function)
+
+
+
+Original DataFrame:
+     A     B     C
+0  1.0  10.0     a
+1  2.0  20.0     b
+2  3.0   NaN     c
+3  NaN  40.0     d
+4  5.0  50.0  None
+
+Imputed DataFrame:
+     A     B     C
+0  1.0  10.0     a
+1  2.0  20.0     b
+2  3.0  30.0     c
+3  2.5  40.0     d
+4  5.0  50.0     d
+
+
+
+
+
+    -->Mean/Median Imputation
+    -->KNN Imputation
+    -->Regression Imputation
+
+--indicator variables
+    -->adding a new binary column to the dataset that indicates whether the original value was missing or no
+
+
+example:
+
+Original Dataset:
+    [[numeric_column]] categorical_column  target_column
+0            10.0                   A             1
+1             NaN                   B             2
+2            15.0                   A             3
+3             8.0                   C             4
+4             NaN                   B             5
+
+Imputation using Mean:
+   numeric_column  categorical_column  target_column
+0            10.0                   A             1
+1            11.0                   B             2
+2            15.0                   A             3
+3             8.0                   C             4
+4            11.0                   B             5
+
+Imputation using KNN:
+   numeric_column  categorical_column  target_column
+0            10.0                   A             1
+1            10.5                   B             2
+2            15.0                   A             3
+3             8.0                   C             4
+4            10.5                   B             5
+
+Imputation using Regression:
+   numeric_column  categorical_column  target_column
+0            10.0                   A             1
+1            11.2                   B             2
+2            15.0                   A             3
+3             8.0                   C             4
+4            11.2                   B             5
+
+Indicator Variable:
+   numeric_column  categorical_column  target_column  numeric_column_missing
+0            10.0                   A             1                        0
+1             NaN                   B             2                        1
+2            15.0                   A             3                        0
+3             8.0                   C             4                        0
+4             NaN                   B             5                        1

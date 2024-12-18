@@ -1,0 +1,117 @@
+Feature engineering
+
+--Handling Missing Values-->imputation,indicator variable.
+--Encoding Categorical Variables
+--Handling Outliers-->truncation, transformation
+--Creating Interaction Terms
+--Feature Scaling-->Standardization, Normalization
+--Binning or Discretization 
+--Feature Selection-->Using techniques like correlation matrix, feature importance, or model-based selection.
+--Date and Time Features
+--Text Features-->Tokenization,Vectorization
+--Feature Aggregation-->aggregation
+
+====================================================================
+
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.impute import SimpleImputer
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
+
+# Sample data
+data = {
+    'feature1': [1, 2, np.nan, 4, 5],
+    'feature2': ['A', 'B', 'A', 'C', 'B'],
+    'target': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+
+# Splitting the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(df[['feature1', 'feature2']], df['target'], test_size=0.2, random_state=42)
+
+# Feature engineering pipeline
+numeric_features = ['feature1']
+numeric_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='mean')),
+    ('scaler', StandardScaler())
+])
+
+categorical_features = ['feature2']
+categorical_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+    ('onehot', OneHotEncoder(handle_unknown='ignore'))
+])
+
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', numeric_transformer, numeric_features),
+        ('cat', categorical_transformer, categorical_features)
+    ])
+
+# Append classifier to preprocessing pipeline
+rf_model = Pipeline(steps=[('preprocessor', preprocessor),
+                            ('regressor', RandomForestRegressor())])
+
+# Fit the model
+rf_model.fit(X_train, y_train)
+
+# Predict
+y_pred = rf_model.predict(X_test)
+
+# Evaluate
+mse = mean_squared_error(y_test, y_pred)
+print(f'Mean Squared Error: {mse}')
+
+
+
+=====================================================================
+
+Common features:
+
+--Encoding Categorical Variables
+--Handling Missing Data-->Imputation: Fill missing values with mean, median, mode, or using more advanced techniques like K-Nearest Neighbors (KNN) imputation.
+--Scaling and Normalization-->MinMaxScaler ,StandardScaler
+--Creating New Features
+
+
+imputation:
+
+from sklearn.impute import SimpleImputer
+
+# Assuming 'df' is your DataFrame with missing values
+imputer = SimpleImputer(strategy='mean')
+imputed_data = imputer.fit_transform(df)
+
+
+
+
+============================================================
+
+Here are the main points covered in the example of feature engineering using Python and pandas:
+
+Sample Data: Creating a sample DataFrame with numerical and categorical features, along with a target variable.
+
+Splitting Data: Splitting the data into training and testing sets using train_test_split.
+
+Feature Engineering Pipeline: Creating a feature engineering pipeline using ColumnTransformer to handle missing values and encode categorical features.
+
+Modeling: Building a pipeline that includes the feature engineering steps and a machine learning model (RandomForestRegressor in this case).
+
+Training and Evaluation: Fitting the model on the training data and evaluating its performance on the test data using mean squared error.
+
+
+
+
+
+
+
+
+
+
+
+

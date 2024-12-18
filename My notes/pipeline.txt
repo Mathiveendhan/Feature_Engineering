@@ -1,0 +1,19 @@
+pipeline
+
+-->Used to chain together multiple preprocessing steps and a model into a single object.
+-->You specify a list of (name, transformer) tuples, where name is a string and transformer is an object that implements the fit and transform methods.
+
+
+
+
+
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+
+pipeline = Pipeline([
+    ('imputer', SimpleImputer(strategy='mean')),
+    ('scaler', StandardScaler()),
+    ('model', LogisticRegression())
+])
+pipeline.fit(X_train, y_train)

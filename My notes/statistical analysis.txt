@@ -1,0 +1,28 @@
+statistical analysis
+
+--Univariate Analysis
+     >central tendency (mean, median, mode) and dispersion (standard deviation, range
+     >histograms, box plots, and density plots
+
+
+--Bivariate Analysis
+     > relationships between two variables, such as correlation analysis and scatter plots
+
+
+--Multivariate Analysis
+    > relationships among multiple variables 
+    > techniques like correlation matrices, principal component analysis, and clustering 
+    >pairplot(seaborn)
+
+
+--Hypothesis Testing
+    > testing hypotheses about the data, using statistical tests like t-tests, ANOVA, and chi-square tests
+
+
+--outlier Detection
+   >Identifying and analyzing outliers in the data
+   >done through techniques like box plots, z-scores, and clustering
+
+
+--Missing Data Analysis
+   >Understanding missing data is important for determining appropriate imputation or handling strategies

@@ -1,0 +1,29 @@
+EDA
+
+Data Loading
+Data Cleaning
+Data Transformation-->handling missing values,
+                      Normalization,
+                      Standardization,
+                      Encoding Categorical Variables,
+                      Binning,
+                      Feature Engineering.
+Data Visualization
+Statistical Analysis
+Dimensionality Reduction
+feature selection
+Feature Engineering
+Data Aggregation
+Data Sampling
+Data Splitting
+
+
+
+Feature Scaling:
+   -->Standardization
+   -->Normalization
+
+https://images.datacamp.com/image/upload/v1649269636/Scikit_Learn_Cheat_Sheet_Python_Machine_Learning_wxjgwe_c6e6df43ab.webp
+https://intellipaat.com/blog/wp-content/uploads/2022/10/Python-Scikit-Cheat-Sheet-2022.jpg
+
+
